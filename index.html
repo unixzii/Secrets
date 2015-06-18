@@ -1,0 +1,34 @@
+<html ng-app="app">
+<head>
+	<title>Secrets - 密聊</title>
+	<script type="text/javascript" src="/public/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="/public/socket.io-1.3.5.js"></script>
+	<link rel="stylesheet" type="text/css" href="/public/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/style/index.css">
+</head>
+<body ng-controller="messageCtrl">
+	<div ng-if="!rejected" class="container-fluid">
+		<div class="row">
+			<div class="chat-panel">
+				<ul class="messages">
+					<li ng-class="{message: true, right: m.user == nickname, center: m.system}" ng-repeat="m in messages">
+						<span ng-if="!m.system" class="message-user">{{m.user}}</span>
+						<span>{{m.message}}</span>
+					</li>
+				</ui>
+			</div>
+			<div class="input-panel">
+				<form ng-submit="send()" ng-controller="messageCtrl">
+					<input id="message-input" class="form-control" ng-model="messageText" name="messageText" type="text" placeholder="{{nickname}}，说点什么吧......" />
+				</form>
+			</div>
+		</div>
+	</div>
+	<div ng-if="rejected" class="fullscreen-alert">
+		<h3>聊天室人满啦！</h3>
+		<p>很抱歉，您来晚了。请稍后再尝试重新登录吧。</p>
+	</div>
+</body>
+<script type="text/javascript" src="/public/angular/angular.min.js"></script>
+<script type="text/javascript" src="/script/index.js"></script>
+</html>

@@ -1,0 +1,52 @@
+.chat-panel {
+	height: 100%;
+	padding-bottom: 60px;
+	padding-top: 40px;
+}
+
+.input-panel {
+	position: absolute;
+	bottom: 0px;
+	height: 60px;
+	width: 100%;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.messages {
+	height: 100%;
+	overflow-y: scroll;
+	list-style: none;
+}
+
+.message {
+	height: 30px;
+}
+
+.message.right {
+	margin-right: 30px;
+	text-align: right;
+}
+
+.message.center {
+	text-align: center;
+	opacity: 0.6
+}
+
+.message-user {
+	font-weight: bold;
+}
+
+.fullscreen-alert {
+	position: absolute;
+	text-align: center;
+	height: 50px;
+	width: 100%;
+	bottom: 50%;
+	font-family: 微软雅黑;
+}
+
+#message-input {
+	position: relative;
+	top: 13px;
+}

@@ -1,0 +1,15 @@
+{
+	"name": "Secrets",
+	"version": "0.0.1",
+	"author": "Cyandev",
+	"description": "A simple chatroom",
+
+	"script": {
+		"start": "node app.js"
+	},
+
+	"dependencies": {
+		"express": "^4.8.0",
+		"socket.io": "^1.3.5"
+	}
+}
